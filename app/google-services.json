@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "511276183099",
+    "firebase_url": "https://appinventoryuptd-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "appinventoryuptd",
+    "storage_bucket": "appinventoryuptd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511276183099:android:d880ede5c2d7180080761e",
+        "android_client_info": {
+          "package_name": "com.lathar.appinventoryuptd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511276183099-k9pqorbo4mn3n0tko4fsf8qkir2ui5cc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYu1cKe61fjRJz50VWgmjEATKHciFCLIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511276183099-k9pqorbo4mn3n0tko4fsf8qkir2ui5cc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

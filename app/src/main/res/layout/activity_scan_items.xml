@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".ScanItemsActivity">
+    
+    <TextView
+        android:id="@+id/tv_scan_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan Barang"
+        android:textSize="28dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+        <EditText
+            android:id="@+id/edt_search_field"
+            android:layout_width="279dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:background="#11AA9E9E"
+            android:drawableLeft="@drawable/ic_search"
+            android:ems="10"
+            android:layout_marginTop="2dp"
+            android:hint="Cari Barang"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="#F7F2F2" />
+
+        <ImageButton
+            android:id="@+id/btn_img_btnsearch"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_camera_alt" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:text="Search"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"/>
+
+
+</LinearLayout>

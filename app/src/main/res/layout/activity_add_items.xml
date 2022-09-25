@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_button"
+    android:orientation="vertical"
+    tools:context=".AddItemsActivity">
+
+
+    <TextView
+        android:id="@+id/tv_heading_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Tambahkan Barang"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_nama_barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nama Barang"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_nama_barang"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="-70dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Kategori"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/edt_nama_barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_heading_add"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="110dp"
+        android:layout_toEndOf="@+id/tv_nama_barang"
+        android:hint="Masukkan Nama"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B4FFFFFF" />
+
+    <EditText
+        android:id="@+id/edt_kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_nama_barang"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/tv_nama_barang"
+        android:hint="Masukkan Kategori "
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B4FFFFFF"/>
+
+    <TextView
+        android:id="@+id/tv_number_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_kategori"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="-70dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nomor Barang"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_qrcode_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_kategori"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        android:layout_toEndOf="@+id/tv_number_code"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nomor Barang"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_add_scan_qrcode"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_qrcode_number"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Scan QR Code"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_add_items"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_add_scan_qrcode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Tambahkan Barang"
+        android:textColor="@color/white" />
+</RelativeLayout>

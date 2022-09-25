@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/backgroundlogin">
+
+    <ImageView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/logologin" />
+
+    <TextView
+        android:id="@+id/tv_login_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-90dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/form_login_text"
+        android:textColor="#184A8F"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_email_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/tv_login_heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="-65dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:hint="Masukkan Email"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/c_button" />
+
+    <EditText
+        android:id="@+id/edt_password_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="-65dp"
+        android:paddingTop="10dp"
+        android:layout_alignBottom="@+id/edt_email_login"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:hint="Masukkan Password"
+        android:textColor="@color/c_button"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edt_password_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/rounded_corner"
+        android:text="@string/btn_login"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_reset_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tv_reset_password"
+        android:clickable="true"/>
+
+    <ProgressBar
+        android:id="@+id/prb_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

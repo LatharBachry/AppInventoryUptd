@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundlogin">
+
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/logologin" />
+
+    <TextView
+        android:id="@+id/tv_login_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-200dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/login_form"
+        android:textColor="#184A8F"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/tv_login_heading"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="-100dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="@string/btn_string_login"
+        android:onClick="login"
+        android:paddingTop="6dp"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/btn_login"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-60dp"
+        android:paddingTop="6dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="@string/btn_string_register"
+        android:onClick="register"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"/>
+
+
+
+</RelativeLayout>

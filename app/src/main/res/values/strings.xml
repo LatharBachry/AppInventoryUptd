@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Gudang UPTD PAB</string>
+    <string name="login_form">Silahkan Masuk atau Daftar</string>
+    <string name="btn_string_login">Masuk</string>
+    <string name="btn_string_register">Daftar</string>
+    <string name="text_add_item">Tambahkan Barang</string>
+    <string name="delete_item">Barang Keluar</string>
+    <string name="tx_view_item">Lihat Barang</string>
+    <string name="tx_view_stock">Lihat Stok Barang</string>
+    <string name="tx_delete_items">Hapus Data Barang</string>
+    <string name="form_register_text">Silahkan Register</string>
+    <string name="form_login_text">Silahkan Login</string>
+    <string name="btn_login">Login</string>
+    <string name="tv_reset_password">Lupa Password?</string>
+</resources>
