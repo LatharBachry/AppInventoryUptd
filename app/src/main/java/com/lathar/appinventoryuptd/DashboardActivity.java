@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -15,12 +16,14 @@ import com.google.firebase.auth.FirebaseAuth;
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth firebaseAuth;
+    Button toast;
     private CardView addItems, deleteItems, scanItems, viewInventory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         addItems = (CardView)findViewById(R.id.addItems);
         deleteItems =(CardView) findViewById(R.id.deleteItems);
@@ -36,10 +39,14 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View view) {
-        Intent dsb;
+        Intent dsb;//dsb dashboard
 
         switch (view.getId()){
             case R.id.addItems: dsb = new Intent(this, AddItemsActivity.class); startActivity(dsb); break;
+            case R.id.deleteItems: dsb = new Intent(this, DeleteItemsActivity.class); startActivity(dsb); break;
+            case R.id.viewInventory: dsb = new Intent(this, ViewInventoryActivity.class); startActivity(dsb); break;
+            case R.id.viewProduct: dsb = new Intent(this, ScanItemsActivity.class); startActivity(dsb); break;
+            default:break;
         }
     }
 
@@ -49,10 +56,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         firebaseAuth.signOut();
         finish();
         startActivity(new Intent(DashboardActivity.this,LoginActivity.class));
-        Toast.makeText(DashboardActivity.this,"LOGOUT SUCCESSFUL", Toast.LENGTH_SHORT).show();
+        Toast.makeText(DashboardActivity.this,"Logout Berhasil", Toast.LENGTH_SHORT).show();
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

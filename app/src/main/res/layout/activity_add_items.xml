@@ -34,10 +34,22 @@
         android:textSize="18dp" />
 
     <TextView
+        android:id="@+id/tv_harga_barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_nama_barang"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="-70dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Stok Barang"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
         android:id="@+id/tv_kategori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/tv_nama_barang"
+        android:layout_alignBottom="@id/tv_harga_barang"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="-70dp"
@@ -59,16 +71,28 @@
         android:textColorHint="#B4FFFFFF" />
 
     <EditText
-        android:id="@+id/edt_kategori"
+        android:id="@+id/edt_harga_barang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edt_nama_barang"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_toEndOf="@+id/tv_nama_barang"
+        android:hint="Masukkan Harga"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B4FFFFFF" />
+
+    <EditText
+        android:id="@+id/edt_kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_harga_barang"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/tv_nama_barang"
         android:hint="Masukkan Kategori "
         android:textColor="#FFFFFF"
-        android:textColorHint="#B4FFFFFF"/>
+        android:textColorHint="#B4FFFFFF" />
 
     <TextView
         android:id="@+id/tv_number_code"

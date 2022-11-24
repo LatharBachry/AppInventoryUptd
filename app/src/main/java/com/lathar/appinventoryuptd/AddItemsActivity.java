@@ -1,6 +1,5 @@
 package com.lathar.appinventoryuptd;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -20,8 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AddItemsActivity extends AppCompatActivity {
-    private EditText itemName, itemCategory;
-    private TextView itemQrCode;
+    private EditText itemName, itemCategory, itemPrice;
+    private TextView itemQrcode;
     private FirebaseAuth firebaseAuth;
     public static TextView resultTextView;
     Button scanButton, addItemToDatabase;
@@ -32,7 +31,6 @@ public class AddItemsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_items);
-
         firebaseAuth = FirebaseAuth.getInstance();
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
@@ -43,36 +41,38 @@ public class AddItemsActivity extends AppCompatActivity {
         addItemToDatabase = findViewById(R.id.btn_add_items);
         itemName = findViewById(R.id.edt_nama_barang);
         itemCategory = findViewById(R.id.edt_kategori);
-        itemQrCode = findViewById(R.id.tv_qrcode_number);
+        itemPrice = findViewById(R.id.edt_harga_barang);
+        itemQrcode = findViewById(R.id.tv_qrcode_number);
 
-        scanButton.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class)));
+        scanButton.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class)));
 
-        addItemToDatabase.setOnClickListener(v -> addItem());
+        addItemToDatabase.setOnClickListener(view -> addItem());
     }
 
     //menambahkan item ke database
     public void addItem(){
         String itemNameValue = itemName.getText().toString();
+        String itemQrcodeValue = itemQrcode.getText().toString();
         String itemCategoryValue = itemCategory.getText().toString();
-        String itemQrcodeValue = itemQrCode.getText().toString();
+        String itemPriceValue = itemPrice.getText().toString();
         final FirebaseUser users = firebaseAuth.getCurrentUser();
         String finalUser = users.getEmail();
         String resultEmail = finalUser.replace(".", "");
 
         if (itemQrcodeValue.isEmpty()){
-            itemQrCode.setError("Data ini Kosong!!");
-            itemQrCode.requestFocus();
+            itemQrcode.setError("Data ini Kosong!!");
+            itemQrcode.requestFocus();
             return;
         }
 
-        if(!TextUtils.isEmpty(itemNameValue)&&!TextUtils.isEmpty(itemCategoryValue)){
-
-            Items items= new Items(itemNameValue,itemCategoryValue,itemQrcodeValue);
+        if(!TextUtils.isEmpty(itemNameValue)&&!TextUtils.isEmpty(itemCategoryValue)&&!TextUtils.isEmpty(itemPriceValue)){
+            Items items= new Items(itemNameValue,itemCategoryValue,itemQrcodeValue,itemPriceValue);
             databaseReference.child(resultEmail).child("Items").child(itemQrcodeValue).setValue(items);
             databaseReferencecat.child(resultEmail).child("ItemByCategory").child(itemCategoryValue).child(itemQrcodeValue).setValue(items);
             itemName.setText("");
-            itemQrCode.setText("");
-            itemQrCode.setText("");
+            itemQrcode.setText("");
+            itemPrice.setText("");
+            itemQrcode.setText("");
             Toast.makeText(AddItemsActivity.this,itemNameValue+" Added",Toast.LENGTH_SHORT).show();
         }
         else {
@@ -81,26 +81,26 @@ public class AddItemsActivity extends AppCompatActivity {
     }
 
     //Logout Below
-    private void Logout(){
-        firebaseAuth.signOut();
-        finish();
-        startActivity(new Intent(AddItemsActivity.this, LoginActivity.class));
-        Toast.makeText(AddItemsActivity.this, "Logout Berhasil", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.logoutMenu:{
-                Logout();
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    private void Logout(){
+//        firebaseAuth.signOut();
+//        finish();
+//        startActivity(new Intent(AddItemsActivity.this, LoginActivity.class));
+//        Toast.makeText(AddItemsActivity.this, "Logout Berhasil", Toast.LENGTH_SHORT).show();
+//    }
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu){
+//        getMenuInflater().inflate(R.menu.menu,menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.logoutMenu:{
+//                Logout();
+//            }
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }

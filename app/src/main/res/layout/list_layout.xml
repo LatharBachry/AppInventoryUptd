@@ -16,85 +16,90 @@
         android:background="@color/c_button"
         android:padding="5dp"
         >
+
         <TextView
-            android:id="@+id/viewitembarcodename"
+            android:id="@+id/tv_itemqrcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Kode Barang"
+            android:layout_marginLeft="10dp"
             android:textColor="#ffff"
-            android:textStyle="bold"
-            android:text="Item Barcode" />
+            android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/viewitembarcode"
+            android:id="@+id/tv_viewqrcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="53dp"
-            android:textColor="#ffff"
+            android:layout_marginStart="69dp"
             android:layout_marginLeft="50dp"
-            android:layout_toEndOf="@+id/viewitembarcodename"
-            android:text="TextView" />
+            android:layout_toEndOf="@+id/tv_itemqrcode"
+            android:text="TextView"
+            android:textColor="#ffff" />
 
         <TextView
-            android:id="@+id/viewitemnamename"
+            android:id="@+id/tv_itemname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Nama Barang"
             android:textColor="#ffff"
-            android:textStyle="bold"
-            android:text="Item Name" />
+            android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/viewitemname"
+            android:id="@+id/tv_viewitemname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="67dp"
+            android:layout_marginStart="64dp"
             android:layout_marginLeft="50dp"
-            android:textColor="#ffff"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/viewitemnamename"
-            android:text="TextView" />
+            android:layout_toEndOf="@+id/tv_itemname"
+            android:text="TextView"
+            android:textColor="#ffff" />
 
         <TextView
-            android:id="@+id/viewitempricename"
+            android:id="@+id/tv_itemprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="Stok Barang"
             android:textColor="#ffff"
-            android:textStyle="bold"
-            android:text="Item Price $" />
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/viewitemprice"
+            android:id="@+id/tv_viewitemprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="62dp"
+            android:layout_marginStart="72dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="40dp"
-            android:textColor="#ffff"
-            android:layout_toEndOf="@+id/viewitempricename"
-            android:text="TextView" />
+            android:layout_toEndOf="@+id/tv_itemprice"
+            android:text="TextView"
+            android:textColor="#ffff" />
 
         <TextView
-            android:id="@+id/viewitemcategoryname"
+            android:id="@+id/tv_itemcategoryname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:text="Kategori Barang"
             android:textColor="#ffff"
-            android:text="Item Category" />
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/viewitemcategory"
+            android:id="@+id/tv_viewitemcategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="47dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="60dp"
-            android:textColor="#ffff"
-            android:layout_toEndOf="@+id/viewitemcategoryname"
-            android:text="TextView" />
+            android:layout_toEndOf="@+id/tv_itemcategoryname"
+            android:text="TextView"
+            android:textColor="#ffff" />
 
 
     </RelativeLayout>

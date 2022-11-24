@@ -12,15 +12,60 @@
         android:id="@+id/tv_header_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="@string/tx_delete_items"
-        android:textSize="20sp" />
+        android:textColor="@color/c_button"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_barcodedelete"
+        android:id="@+id/tv_qrcode_delete"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_header_delete"
+        android:layout_marginLeft="225dp"
+        android:layout_marginBottom="-232dp"
+        android:hint="Kode QR Code Barang"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tv_item_todelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="300dp"
+        android:text="Barang Yang Di Hapus"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_scan_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="385dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Scan QR Code"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_delete_item_todatabase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_scan_delete"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-70dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Hapus Barang"
+        android:textColor="@color/white" />
+
+
 
 
 </RelativeLayout>

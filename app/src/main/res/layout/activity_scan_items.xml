@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
+    android:background="@color/c_button"
     tools:context=".ScanItemsActivity">
     
     <TextView
@@ -13,15 +13,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scan Barang"
-        android:textSize="28dp"
-        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="30dp">
 
         <EditText
             android:id="@+id/edt_search_field"
@@ -48,19 +49,47 @@
 
     <Button
         android:id="@+id/btn_search"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner"
-        android:text="Search"
+        android:text="Cari Barang"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tv_countItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Barang = "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="3dp"/>
+        <TextView
+            android:id="@+id/tv_totalCountItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="0"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_items"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>

@@ -66,17 +66,18 @@
         android:id="@+id/edt_password_reg"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_alignBottom="@+id/edt_email_reg"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="-65dp"
-        android:paddingTop="10dp"
-        android:layout_alignBottom="@+id/edt_email_reg"
-        android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/white"
         android:hint="Masukkan Password"
-        android:textColor="@color/c_button"
-        android:textAlignment="center"/>
+        android:inputType="textPassword"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/c_button" />
 
     <EditText
         android:id="@+id/edt_confpassword_reg"
@@ -90,6 +91,7 @@
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/white"
         android:hint="Konfirmasi Password"
+        android:inputType="textPassword"
         android:paddingTop="10dp"
         android:textAlignment="center"
         android:textColor="@color/c_button" />

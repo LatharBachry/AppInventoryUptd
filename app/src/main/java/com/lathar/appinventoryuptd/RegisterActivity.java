@@ -102,16 +102,14 @@ public class RegisterActivity extends AppCompatActivity {
 
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(task -> {
-
+                .addOnCompleteListener (new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-
-//                            addStudent();
 
                         final User user = new User(
                                 name,
                                 email
-
                         );
                         //important to retrive data and send data based on user email
                         FirebaseUser usernameinfirebase = mAuth.getCurrentUser();
@@ -122,22 +120,21 @@ public class RegisterActivity extends AppCompatActivity {
                         FirebaseDatabase.getInstance().getReference("Users")
                                 .child(resultemail).child("UserDetails")
                                 .setValue(user).addOnCompleteListener(task1 -> {
-                                    progressBar.setVisibility(View.GONE);
-                                    if (task1.isSuccessful()) {
+                                   progressBar.setVisibility(View.GONE);
+                                   if (task1.isSuccessful()){
+                                       Toast.makeText(RegisterActivity.this, "Registrasi Berhasil", Toast.LENGTH_LONG).show();
+                                       startActivity(new Intent(RegisterActivity.this, DashboardActivity.class));
+                                   } else {
+                                    //Tampilan pesan gagal
+                                   }
 
-                                        Toast.makeText(RegisterActivity.this, "Registration Success", Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(RegisterActivity.this,DashboardActivity.class));
-                                    } else {
-                                        Toast.makeText(RegisterActivity.this, "Tidak dapat mengirim", Toast.LENGTH_SHORT).show();
-                                    }
                                 });
-
-                    } else {
-                        progressBar.setVisibility(View.GONE);
-                        Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_LONG).show();
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+                        Toast.makeText(RegisterActivity.this, "Registrasi Gagal", Toast.LENGTH_LONG).show();
                     }
-                });
+                }
+        });
 
     }
-
 }

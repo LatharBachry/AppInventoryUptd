@@ -18,12 +18,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.w3c.dom.Text;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText edtEmail;
     private EditText edtPassword;
     private Button btnLogin;
-    private TextView tvPasswordReset;
+    private TextView tvPasswordReset, tvRegisterAccount;
     private ProgressBar progressBar;
     private EditText edtPassResetEmail;
 
@@ -40,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = (EditText) findViewById(R.id.edt_password_login);
         btnLogin = (Button) findViewById(R.id.btn_login);
 
+        tvRegisterAccount = (TextView) findViewById(R.id.tv_register_account);
         tvPasswordReset = (TextView) findViewById(R.id.tv_reset_password);
         edtPassResetEmail = findViewById(R.id.edt_email_login);
         progressBar = (ProgressBar) findViewById(R.id.prb_login);
@@ -59,6 +62,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 resetPassword();
+            }
+        });
+
+        tvRegisterAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backRegister = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(backRegister);
             }
         });
 

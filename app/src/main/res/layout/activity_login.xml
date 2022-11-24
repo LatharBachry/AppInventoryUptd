@@ -50,17 +50,19 @@
         android:id="@+id/edt_password_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_alignBottom="@+id/edt_email_login"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="-65dp"
-        android:paddingTop="10dp"
-        android:layout_alignBottom="@+id/edt_email_login"
-        android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/white"
         android:hint="Masukkan Password"
-        android:textColor="@color/c_button"
-        android:textAlignment="center"/>
+        android:paddingTop="10dp"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:password="true"
+        android:textColor="@color/c_button" />
 
     <Button
         android:id="@+id/btn_login"
@@ -80,9 +82,20 @@
         android:layout_alignBottom="@+id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-20dp"
+        android:clickable="true"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/tv_reset_password"
-        android:clickable="true"/>
+        android:text="@string/tv_reset_password" />
+
+    <TextView
+        android:id="@+id/tv_register_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-70dp"
+        android:clickable="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Belum Punya Akun? Klik Disini" />
 
     <ProgressBar
         android:id="@+id/prb_login"
