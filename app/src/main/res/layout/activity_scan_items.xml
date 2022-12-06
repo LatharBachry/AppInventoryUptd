@@ -47,38 +47,29 @@
             android:src="@drawable/ic_camera_alt" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:text="Cari Barang"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/white"
-        android:layout_gravity="center"/>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp">
-
-        <TextView
-            android:id="@+id/tv_countItemText"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Total Barang = "
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginLeft="3dp"/>
-        <TextView
-            android:id="@+id/tv_totalCountItem"
-            android:layout_width="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/tx_view_item"
+            android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/btn_search_name"
+            android:layout_width="150dp"
+            android:layout_marginLeft="5dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="0"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+            android:background="@drawable/rounded_corner"
+            android:text="@string/tx_view_item_name"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 

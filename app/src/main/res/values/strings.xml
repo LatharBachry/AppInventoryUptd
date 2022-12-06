@@ -5,7 +5,9 @@
     <string name="btn_string_register">Daftar</string>
     <string name="text_add_item">Tambahkan Barang</string>
     <string name="delete_item">Barang Keluar</string>
-    <string name="tx_view_item">Cari Barang</string>
+    <string name="tx_view_item">Cari Kode</string>
+    <string name="text_search_item">Cari Barang</string>
+    <string name="tx_view_item_name">Cari Nama</string>
     <string name="tx_view_stock">Lihat Stok Barang</string>
     <string name="tx_delete_items">Hapus Data Barang</string>
     <string name="form_register_text">Silahkan Register</string>

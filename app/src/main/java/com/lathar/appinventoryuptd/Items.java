@@ -3,6 +3,9 @@ package com.lathar.appinventoryuptd;
 public class Items {
 
     private String itemQrcode;
+
+
+
     private String itemName;
     private String itemCategory;
     private String itemPrice;
@@ -10,7 +13,6 @@ public class Items {
     public Items() {
 
     }
-    //setter
     public Items(String itemName, String itemCategory, String itemQrcode, String itemPrice){
         this.itemQrcode = itemQrcode;
         this.itemName = itemName;
@@ -32,6 +34,23 @@ public class Items {
     }
     public String getItemQrcode() {
         return itemQrcode;
+    }
+
+    //setter
+    public void setItemQrcode(String itemQrcode) {
+        this.itemQrcode = itemQrcode;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public void setItemCategory(String itemCategory) {
+        this.itemCategory = itemCategory;
+    }
+
+    public void setItemPrice(String itemPrice) {
+        this.itemPrice = itemPrice;
     }
 
 }

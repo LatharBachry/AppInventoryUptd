@@ -17,7 +17,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     private FirebaseAuth firebaseAuth;
     Button toast;
-    private CardView addItems, deleteItems, scanItems, viewInventory;
+    private CardView addItems, deleteItems, scanItems, viewInventory, stockItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +29,13 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         deleteItems =(CardView) findViewById(R.id.deleteItems);
         scanItems = (CardView) findViewById(R.id.viewProduct);
         viewInventory = (CardView) findViewById(R.id.viewInventory);
+        stockItems = (CardView)findViewById(R.id.stockInventory);
 
         addItems.setOnClickListener(this);
         deleteItems.setOnClickListener(this);
         scanItems.setOnClickListener(this);
         viewInventory.setOnClickListener(this);
+        stockItems.setOnClickListener(this);
 
     }
 
@@ -46,6 +48,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             case R.id.deleteItems: dsb = new Intent(this, DeleteItemsActivity.class); startActivity(dsb); break;
             case R.id.viewInventory: dsb = new Intent(this, ViewInventoryActivity.class); startActivity(dsb); break;
             case R.id.viewProduct: dsb = new Intent(this, ScanItemsActivity.class); startActivity(dsb); break;
+            case R.id.stockInventory: dsb = new Intent(this, InOutStockActivity.class); startActivity(dsb); break;
             default:break;
         }
     }

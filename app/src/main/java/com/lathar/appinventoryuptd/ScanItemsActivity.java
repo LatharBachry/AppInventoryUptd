@@ -28,13 +28,11 @@ public class ScanItemsActivity extends AppCompatActivity {
     public static EditText resultSearchView;
     private FirebaseAuth firebaseAuth;
     ImageButton scanToSearch;
-    Button btnSearch;
+    Button btnSearch, btnSearchName;
     Adapter adapter;
     RecyclerView mRecyclerView;
     DatabaseReference mDatabaseReference;
 
-    private int countTotalItem;
-    private TextView totalNoItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +48,7 @@ public class ScanItemsActivity extends AppCompatActivity {
         resultSearchView = findViewById(R.id.edt_search_field);
         scanToSearch = findViewById(R.id.btn_img_btnsearch);
         btnSearch = findViewById(R.id.btn_search);
-
-        //testing
-        totalNoItem = findViewById(R.id.tv_totalCountItem);
+        btnSearchName=findViewById(R.id.btn_search_name);
 
         mRecyclerView = findViewById(R.id.rv_items);
         LinearLayoutManager manager = new LinearLayoutManager(this);
@@ -69,10 +65,15 @@ public class ScanItemsActivity extends AppCompatActivity {
                 String searchText = resultSearchView.getText().toString();
                 firebasesearch(searchText);
             }
-
-
         });
 
+        btnSearchName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String searchText = resultSearchView.getText().toString();
+                firebasesearchname(searchText);
+            }
+        });
 
     }
     
@@ -95,12 +96,12 @@ public class ScanItemsActivity extends AppCompatActivity {
     }
 
     public void firebasesearchname(String searchText) {
-        Query firebaseSearchQueryName = mDatabaseReference.orderByChild("itemName").startAt(searchText).endAt(searchText+"\uf8ff");
+        Query firebaseSearchQuery = mDatabaseReference.orderByChild("itemName").startAt(searchText).endAt(searchText+"\uf8ff");
         FirebaseRecyclerAdapter<Items, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Items, UsersViewHolder>(
                 Items.class,
                 R.layout.list_layout,
                 UsersViewHolder.class,
-                firebaseSearchQueryName)
+                firebaseSearchQuery)
         {
             @Override
             protected void populateViewHolder(UsersViewHolder usersViewHolder, Items model, int position) {

@@ -29,6 +29,13 @@
         <entry key="..\:/Belajar Android/AppInventoryUptd/app/src/main/res/layout/activity_view_inventory.xml" value="0.25" />
         <entry key="..\:/Belajar Android/AppInventoryUptd/app/src/main/res/layout/list_layout.xml" value="0.5" />
         <entry key="..\:/Belajar Android/AppInventoryUptd/app/src/main/res/menu/menu.xml" value="0.33" />
+        <entry key="..\:/Project Skripsi App/AppInventoryUptd/app/src/main/res/drawable/ic_baseline_autorenew.xml" value="0.11666666666666667" />
+        <entry key="..\:/Project Skripsi App/AppInventoryUptd/app/src/main/res/drawable/ic_min.xml" value="0.22685185185185186" />
+        <entry key="..\:/Project Skripsi App/AppInventoryUptd/app/src/main/res/layout/activity_dashboard.xml" value="0.18642350557244175" />
+        <entry key="..\:/Project Skripsi App/AppInventoryUptd/app/src/main/res/layout/activity_in_out_stock.xml" value="0.18642350557244175" />
+        <entry key="..\:/Project Skripsi App/AppInventoryUptd/app/src/main/res/layout/activity_scan_code.xml" value="0.18642350557244175" />
+        <entry key="..\:/Project Skripsi App/AppInventoryUptd/app/src/main/res/layout/activity_scan_code_delete.xml" value="0.18642350557244175" />
+        <entry key="..\:/Project Skripsi App/AppInventoryUptd/app/src/main/res/layout/activity_scan_items.xml" value="0.18642350557244175" />
       </map>
     </option>
   </component>
